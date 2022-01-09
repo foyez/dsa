@@ -32,14 +32,14 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 #### Big-O list
 
-- ✅ O(1) Constant Time - no loops
-- ✅ O(logN) Logarithmic - usually searching algorithms have log(n) if they are sorted (Binary Search)
-- ✅ O(n) Linear Time - for, while loops
-- ✅ O(nlog(n)) Log Linear - usually Sorting algorithms
-- ✅ O(n^2) Quadratic Time - every element in a collection needs to be compared to every other element. Two nested loops
-- ✅ O(2^n) Exponential Time - recursive algorithms that solve a problem of size N
-- ✅ O(n!) Factorial Time - Run a loop for every element
-- ✅ Two separate inputs: O(a + b) or O(a \_ b)
+- ✅ **O(1) Constant Time:** no loops
+- ✅ **O(logN) Logarithmic:** usually searching algorithms have log(n) if they are sorted (Binary Search) [size 8 -> 3 operations (log2^8), size 16 -> 4 operations (log2^16)]
+- ✅ **O(n) Linear Time:** for, while loops
+- ✅ **O(n \* logN):** Log Linear - usually Sorting algorithms
+- ✅ **O(n^2) Quadratic Time:** every element in a collection needs to be compared to every other element. Two nested loops
+- ✅ **O(2^n) Exponential Time:** recursive algorithms that solve a problem of size N
+- ✅ **O(n!) Factorial Time:** Run a loop for every element
+- ✅ **Two separate inputs:** O(a + b) or O(a \* b)
 
 #### Common Data Structure Operations
 
