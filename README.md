@@ -24,6 +24,12 @@
 - Strings require O(n) space (where n is the string length)
 - Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
 
+#### O (Big Oh), Ω (Big Omega) and Θ (Big Theta)
+
+- Big oh (O) - defines the worst case. e.g.: O(n)
+- Big Omega (Ω) - defines the best case. e.g.: Ω(1)
+- Big Theta (Θ) - when best case and worst case are same. e.g.: Θ(1)
+
 #### Big-O Complexity Chart
 
 ![Big O Complexity Chart](assets/big-o/big-o-complexity-chart.jpg)
