@@ -68,6 +68,10 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 <details>
 <summary>View contents</summary>
 
+The purpose of a graph is to show how different things are connected to one another (also known as network). A graph is similar to a tree.
+
+![graph-node-edge](assets/graph/graph.png)
+
 #### DFS (Depth First Search)
 
 DFS Traversal
