@@ -63,6 +63,8 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 ## Graph
 
+> Graph is a data structure designed to show relationships between objects.
+
 <details>
 <summary>View contents</summary>
 
