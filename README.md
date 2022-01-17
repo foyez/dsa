@@ -60,3 +60,28 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 </details>
+
+## Graph
+
+<details>
+<summary>View contents</summary>
+
+#### DFS (Depth First Search)
+
+DFS Traversal
+
+1. Pre-order
+
+![pre-order](assets/graph/pre-order.png)
+
+2. In-order
+
+![pre-order](assets/graph/in-order.png)
+
+3. Post-order
+
+![pre-order](assets/graph/post-order.png)
+
+source: [data structures and algorithms in python](https://classroom.udacity.com/courses/ud513/lessons/7114284829/concepts/77366995150923)
+
+</details>
