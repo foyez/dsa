@@ -2,10 +2,10 @@
 
 ## Big-O Notation
 
+> used to classify algorithms according to how their **run time** or **space** requirements grow as the input size grows.
+
 <details>
 <summary>View contents</summary>
-
-> used to classify algorithms according to how their **run time** or **space** requirements grow as the input size grows.
 
 #### Time Complexity
 
