@@ -72,6 +72,19 @@ The purpose of a graph is to show how different things are connected to one anot
 
 ![graph-node-edge](assets/graph/graph.png)
 
+#### BFS (Breath First Search)
+
+<details>
+<summary>View contents</summary>
+
+BFS Traversal
+
+<img width="848" alt="image" src="https://user-images.githubusercontent.com/11992095/195859575-520cccdc-621e-4de6-ad4c-4f8185a8f30d.png">
+
+[BFS in geekforgeeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
+
+</details>
+
 #### DFS (Depth First Search)
 
 <details>
