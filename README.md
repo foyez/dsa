@@ -80,6 +80,8 @@ The purpose of a graph is to show how different things are connected to one anot
 BFS Traversal
 
 <img width="848" alt="image" src="https://user-images.githubusercontent.com/11992095/195859575-520cccdc-621e-4de6-ad4c-4f8185a8f30d.png">
+    
+<img width="1187" alt="image" src="https://user-images.githubusercontent.com/11992095/195860975-8d448e5a-0635-455d-b219-9028dcf58574.png">
 
 [BFS in geekforgeeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
