@@ -74,6 +74,9 @@ The purpose of a graph is to show how different things are connected to one anot
 
 #### DFS (Depth First Search)
 
+<details>
+<summary>View contents</summary>
+
 DFS Traversal
 
 1. Pre-order
@@ -89,5 +92,61 @@ DFS Traversal
 ![pre-order](assets/graph/post-order.png)
 
 source: [data structures and algorithms in python](https://classroom.udacity.com/courses/ud513/lessons/7114284829/concepts/77366995150923)
+
+**Implementation:**
+
+```py
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+# left - root - right
+def printInOrder(root):
+    if root:
+        printInOrder(root.left)
+        print(root.val, end=" ")
+        printInOrder(root.right)
+
+
+# root - left - right
+def printPreOrder(root):
+    if root:
+        print(root.val, end=" ")
+        printPreOrder(root.left)
+        printPreOrder(root.right)
+
+
+# left - right - root
+def printPostOrder(root):
+    if root:
+        printPostOrder(root.left)
+        printPostOrder(root.right)
+        print(root.val, end=" ")
+
+
+if __name__ == "__main__":
+    root = Node("D")
+    root.left = Node("B")
+    root.right = Node("E")
+    root.left.left = Node("A")
+    root.left.right = Node("C")
+    root.right.right = Node("F")
+
+    print("Pre Order:", end=" ")
+    printPreOrder(root)
+    print()
+
+    print("In Order:", end=" ")
+    printInOrder(root)
+    print()
+
+    print("Post Order:", end=" ")
+    printPostOrder(root)
+```
+
+</details>
 
 </details>
