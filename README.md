@@ -2,7 +2,7 @@
 
 ## Big-O Notation
 
-> used to classify algorithms according to how their **run time** or **space** requirements grow as the input size grows.
+> Used to classify algorithms according to how their **run time** or **space** requirements grow as the input size grows.
 
 <details>
 <summary>View contents</summary>
@@ -61,38 +61,29 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 </details>
 
-## Graph
+## Tree
 
-> Graph is a data structure designed to show relationships between objects.
-
-<details>
-<summary>View contents</summary>
-
-The purpose of a graph is to show how different things are connected to one another (also known as network). A graph is similar to a tree.
-
-![graph-node-edge](assets/graph/graph.png)
-
-#### BFS (Breath First Search)
+> A tree is non-linear and a hierarchical data structure consisting of a collection of nodes such that each node of the tree stores a value and a list of references to other nodes (the “children”). <sup>[ref](https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/)</sup>
 
 <details>
 <summary>View contents</summary>
 
-BFS Traversal
+#### Breath First Traversals
+
+<details>
+<summary>View contents</summary>
 
 <img width="848" alt="image" src="https://user-images.githubusercontent.com/11992095/195859575-520cccdc-621e-4de6-ad4c-4f8185a8f30d.png">
     
 <img width="1187" alt="image" src="https://user-images.githubusercontent.com/11992095/195860975-8d448e5a-0635-455d-b219-9028dcf58574.png">
 
-[BFS in geekforgeeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
 </details>
 
-#### DFS (Depth First Search)
+#### Depth First Traversals
 
 <details>
 <summary>View contents</summary>
-
-DFS Traversal
 
 1. Pre-order
 
@@ -161,6 +152,28 @@ if __name__ == "__main__":
     print("Post Order:", end=" ")
     printPostOrder(root)
 ```
+
+</details>
+
+</details>
+
+## Graph
+
+> Graph is a data structure designed to show relationships between objects.
+
+<details>
+<summary>View contents</summary>
+
+The purpose of a graph is to show how different things are connected to one another (also known as network). A graph is similar to a tree.
+
+![graph-node-edge](assets/graph/graph.png)
+
+### BFS (Breath First Search)
+
+<details>
+<summary>View contents</summary>
+
+[BFS in geekforgeeks](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
 
 </details>
 
