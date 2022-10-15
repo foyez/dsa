@@ -61,6 +61,207 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 </details>
 
+## Linked List
+
+> A linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+
+![image](https://user-images.githubusercontent.com/11992095/195976783-29e5f88d-20dc-4e6f-822c-109cac983f57.png)
+
+[source](https://www.geeksforgeeks.org/data-structures/linked-list/)
+
+<details>
+<summary>View contents</summary>
+
+### Linked List Basic operations
+
+```py
+
+from typing import Optional, Tuple
+from typing_extensions import Self
+
+
+class Node:
+    def __init__(self, val: int = 0, next: Optional[Self] = None):
+        self.val = val
+        self.next = next
+
+
+class LinkedListCrud:
+    def __init__(self) -> None:
+        # head: 1 -> 2
+        self.head = Node(1)
+        self.head.next = Node(2)
+
+    # detect loop
+    def detectLoop(self) -> Optional[Node]:
+        slow = self.head
+        fast = self.head
+
+        while fast and fast.next and slow != fast:
+            slow = slow.next
+            fast = fast.next.next
+
+        if slow and slow == fast:
+            print("Loop detected")
+            return slow
+        else:
+            print("Loop doesn't exists")
+            return None
+
+    # initiate loop
+    def initiateLoop(self, last: Node, middle: Node) -> None:
+        last.next = middle
+
+    # Find middle
+    def findMiddle(self) -> Node:
+        slow = self.head
+        fast = self.head
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        return slow
+
+    # Reverse the linked list
+    def reverseLL(self):
+        prev = None
+        curr = self.head
+
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+
+        self.head = prev
+
+    # Delete a node
+    def deleteNode(self, index: int):
+        dummy = Node(next=self.head)
+        prev, curr = dummy, self.head
+        count = -1
+
+        while curr and count != index-1:
+            prev = curr
+            curr = curr.next
+            count += 1
+
+        if count+1 != index:
+            print("Index {} doesn't exists".format(index))
+            return
+
+        prev.next = curr.next
+        self.head = dummy.next
+
+    # Insert at a node
+    def insertAt(self, index: int, val: int) -> None:
+        dummy = Node(next=self.head)
+        prev, curr = dummy, self.head
+        count = -1
+
+        while curr and count != index-1:
+            prev = curr
+            curr = curr.next
+            count += 1
+
+        if count+1 != index:
+            print("Index {} doesn't exists".format(index))
+            return
+
+        newNode = Node(val=val)
+        newNode.next = curr
+        prev.next = newNode
+        self.head = dummy.next
+
+        # Insert at the end
+    def insertAtEnd(self, val: int) -> None:
+        curr = self.head
+
+        while curr and curr.next:
+            curr = curr.next
+        curr.next = Node(val)
+
+    # Insert at the beginning
+    def insertAtBeginning(self, val: int) -> None:
+        dummy = Node(val)
+        dummy.next = self.head
+        self.head = dummy
+
+    # get last node
+    def getLastNode(self) -> Node:
+        curr = self.head
+
+        while curr and curr.next:
+            curr = curr.next
+
+        return curr
+
+    # Print the linked list
+    def printLL(self, node=None, msg: str = ""):
+        if not self.head:
+            print("Linked List is empty.")
+
+        curr = node if node else self.head
+        if msg:
+            print(msg+":", end=" ")
+
+        while curr:
+            print(curr.val, end=" ")
+            curr = curr.next
+        print()
+
+
+if __name__ == "__main__":
+    ll = LinkedListCrud()
+
+    # crud operations
+    ll.printLL(msg="Before Insert")
+    ll.insertAtBeginning(5)
+    ll.printLL(msg="After inserting 5 at beginning")
+    ll.insertAtEnd(100)
+    ll.printLL(msg="After inserting 100 at end")
+    ll.insertAt(4, 200)
+    ll.printLL(msg="After inserting 200 at 4th or last index")
+    ll.insertAt(0, 50)
+    ll.printLL(msg="After inserting 200 at 0 or 1st index")
+    ll.insertAt(2, 46)
+    ll.printLL(msg="After inserting 46 at 2nd index")
+    ll.deleteNode(0)
+    ll.printLL(msg="After deleting beginning node")
+    ll.deleteNode(5)
+    ll.printLL(msg="After deleting end node")
+
+    # revers a LL
+    ll.reverseLL()
+    ll.printLL(msg="After reversing the linked list")
+
+    # find middle
+    middleNode = ll.findMiddle()
+    ll.printLL(node=middleNode, msg="Middle Node")
+
+    # find loop, remove loop, find length of loop
+    lastNode = ll.getLastNode()
+    ll.initiateLoop(lastNode, middleNode)
+    ll.detectLoop()
+```
+
+```
+Before Insert: 1 2 
+After inserting 5 at beginning: 5 1 2 
+After inserting 100 at end: 5 1 2 100 
+After inserting 200 at 4th or last index: 5 1 2 100 200 
+After inserting 200 at 0 or 1st index: 50 5 1 2 100 200 
+After inserting 46 at 2nd index: 50 5 46 1 2 100 200 
+After deleting beginning node: 5 46 1 2 100 200 
+After deleting end node: 5 46 1 2 100 
+After reversing the linked list: 100 2 1 46 5 
+Middle Node: 1 46 5 
+Loop detected
+```
+
+</details>
+
 ## Tree
 
 > A tree is non-linear and a hierarchical data structure consisting of a collection of nodes such that each node of the tree stores a value and a list of references to other nodes (the “children”). <sup>[ref](https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/)</sup>
@@ -68,7 +269,7 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 <details>
 <summary>View contents</summary>
 
-#### Breath First Traversals
+### Breath First Traversals
 
 <details>
 <summary>View contents</summary>
@@ -80,7 +281,7 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 </details>
 
-#### Depth First Traversals
+### Depth First Traversals
 
 <details>
 <summary>View contents</summary>
