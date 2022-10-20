@@ -269,6 +269,43 @@ Loop detected
 <details>
 <summary>View contents</summary>
 
+### Binary Tree
+
+> A tree is a non-linear data structure. It has no limitation on the number of children. A binary tree has a limitation as any node of the tree has at most two children: a left and a right child.
+
+<details>
+<summary>View contents</summary>
+
+![image](https://user-images.githubusercontent.com/11992095/196828888-d53b98ab-ca50-48d6-a97f-d72de9680fd9.png)
+
+
+#### Some terminology of Complete Binary Tree:
+- Root – Node in which no edge is coming from the parent. Example -node A
+- Child – Node having some incoming edge is called child. Example – nodes B, H are the child of A and D respectively.
+- Sibling – Nodes having the same parent are sibling. Example- J, K are siblings as they have the same parent E.
+- Degree of a node – Number of children of a particular parent. Example- Degree of A is 2 and Degree of H is 1. Degree of L is 0.
+- Internal/External nodes – Leaf nodes are external nodes and non leaf nodes are internal nodes.
+- Level – Count nodes in a path to reach a destination node. Example- Level of node H is 3 as nodes A, D and H themselves form the path.
+- Height – Number of edges to reach the destination node, Root is at height 0. Example – Height of node E is 2 as it has two edges from the root.
+
+#### Properties of Complete Binary Tree:
+- A complete binary tree is said to be a proper binary tree where all leaves have the same depth.
+- In a complete binary tree number of nodes at depth d is 2d. 
+- In a  complete binary tree with n nodes height of the tree is log(n+1).
+- All the levels except the last level are completely full.
+
+#### Perfect Binary Tree vs Complete Binary Tree:
+A binary tree of height ‘h’ having the maximum number of nodes is a perfect binary tree. 
+For a given height h, the maximum number of nodes is 2h+1-1.
+
+A complete binary tree of height h is a proper binary tree up to height h-1, and in the last level element are stored in left to right order.
+
+References:
+- [Complete Binary Tree](https://www.geeksforgeeks.org/complete-binary-tree/)
+- [Binary Tree Data Structure](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+
+</details>
+
 ### Breath First Traversals
 
 <details>
