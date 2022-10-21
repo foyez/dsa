@@ -65,12 +65,11 @@ source: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 > A linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
 
-![image](https://user-images.githubusercontent.com/11992095/195976783-29e5f88d-20dc-4e6f-822c-109cac983f57.png)
-
-[source](https://www.geeksforgeeks.org/data-structures/linked-list/)
-
 <details>
 <summary>View contents</summary>
+
+![image](https://user-images.githubusercontent.com/11992095/195976783-29e5f88d-20dc-4e6f-822c-109cac983f57.png)
+[source](https://www.geeksforgeeks.org/data-structures/linked-list/)
 
 ### Linked List Basic operations
 
@@ -392,6 +391,71 @@ if __name__ == "__main__":
 ```
 
 </details>
+
+</details>
+
+## Trie
+
+> A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
+
+<details>
+<summary>View contents</summary>
+
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/11992095/197226342-5440930f-2307-417f-8c76-8f3fa7390353.png">
+
+[source](https://en.wikipedia.org/wiki/Trie#/media/File:Trie_example.svg)
+
+### Implement Trie
+
+```py
+class TrieNode:
+  def __init__(self):
+    self.children = {}
+    self.endOfWord = False
+
+class Trie:
+
+    def __init__(self):
+      self.root = TrieNode()
+        
+
+    def insert(self, word: str) -> None:
+      curr = self.root
+      
+      for ch in word:
+        if ch not in curr.children:
+          curr.children[ch] = TrieNode()
+        curr = curr.children[ch]
+        
+      curr.endOfWord = True
+        
+
+    def search(self, word: str) -> bool:
+      curr = self.root
+      
+      for ch in word:
+        if ch not in curr.children:
+          return False
+        curr = curr.children[ch]
+      return curr.endOfWord
+        
+
+    def startsWith(self, prefix: str) -> bool:
+      curr = self.root
+      
+      for ch in prefix:
+        if ch not in curr.children:
+          return False
+        curr = curr.children[ch]
+        
+      return True
+      
+trie = Trie()
+trie.insert("apple")
+trie.search("apple") # True
+trie.search("app") # False
+trie.startsWith("app") # True
+```
 
 </details>
 
