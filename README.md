@@ -336,7 +336,7 @@ References:
 
 source: [data structures and algorithms in python](https://classroom.udacity.com/courses/ud513/lessons/7114284829/concepts/77366995150923)
 
-**Implementation:**
+**Implementation (using recursion):**
 
 ```py
 class Node:
@@ -388,6 +388,45 @@ if __name__ == "__main__":
 
     print("Post Order:", end=" ")
     printPostOrder(root)
+```
+
+**Implementation (using stack):**
+
+```py
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+
+def printPreOrder(root):
+    stack = [root]
+
+    while stack:
+        node = stack.pop()
+        print(node.val)
+        if node.right:
+            stack.append(node.right)
+        if node.left:
+            stack.append(node.left)
+
+
+if __name__ == '__main__':
+    D = Node('D')
+    B = Node('B')
+    E = Node('E')
+    A = Node('A')
+    C = Node('C')
+    F = Node('F')
+
+    D.left = B
+    D.right = E
+    B.left = A
+    B.right = C
+    E.right = F
+
+    printPreOrder(D)
 ```
 
 </details>
