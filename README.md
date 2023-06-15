@@ -314,6 +314,31 @@ References:
     
 <img width="1187" alt="image" src="https://user-images.githubusercontent.com/11992095/195860975-8d448e5a-0635-455d-b219-9028dcf58574.png">
 
+**Implementation (using queue):**
+
+```py
+def bfs(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+
+        queue = [root]
+
+        while queue:
+            next_level = []
+
+            for node in queue:
+                print(node.val)
+
+                if node.left:
+                    next_level.append(node.left)
+
+                if node.right:
+                    next_level.append(node.right)
+
+            # Move to the next level
+            queue = next_level
+```
+
 
 </details>
 
@@ -406,6 +431,7 @@ def printPreOrder(root):
     while stack:
         node = stack.pop()
         print(node.val)
+
         if node.right:
             stack.append(node.right)
         if node.left:
