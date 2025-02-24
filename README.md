@@ -548,9 +548,9 @@ The purpose of a graph is to show how different things are connected to one anot
 
 </details>
 
-# Problem Solving Patterns
+## Problem Solving Patterns
 
-## Time complexity
+### Time complexity
 
 <details>
 <summary>View contents</summary>
@@ -559,12 +559,12 @@ Let n be the main variable in the problem.
 
 - If n ≤ 12, the time complexity can be O(n!).
 - If n ≤ 25, the time complexity can be O(2n).
-- If n ≤ 100, the time complexity can be O(n4).
-- If n ≤ 500, the time complexity can be O(n3).
-- If n ≤ 104, the time complexity can be O(n2).
-- If n ≤ 106, the time complexity can be O(n log n).
-- If n ≤ 108, the time complexity can be O(n).
-- If n > 108, the time complexity can be O(log n) or O(1).
+- If n ≤ 100, the time complexity can be O(n^4).
+- If n ≤ 500, the time complexity can be O(n^3).
+- If n ≤ 10^4, the time complexity can be O(n^2).
+- If n ≤ 10^6, the time complexity can be O(n log n).
+- If n ≤ 10^8, the time complexity can be O(n).
+- If n > 10^8, the time complexity can be O(log n) or O(1).
 
 **Examples of each common time complexity**
 
@@ -579,7 +579,7 @@ Let n be the main variable in the problem.
 
 </details>
 
-## Problem Solving Tips
+### Problem Solving Tips
 
 <details>
 <summary>View contents</summary>
@@ -639,7 +639,7 @@ source: [Sean Prashad's Leetcode Patterns](https://seanprashad.com/leetcode-patt
 
 </details>
 
-## Arithmetic
+### Arithmetic
 
 1. Digit to sum (input: 123, output: 6)
 
@@ -747,9 +747,9 @@ console.log(bigMod(2, 100, 7)); // 2 ^ 5 % 7 = 2
 
 </details>
 
-## Common Patterns
+### Common Patterns
 
-### 1. Sliding window
+#### 1. Sliding window
 
 <details>
 <summary>View contents</summary>
@@ -790,7 +790,7 @@ maxPrice([1,4,5,6], 3) # 15
 
 </details>
 
-## Array
+### Array
 
 1. Define a 2D array
 
@@ -818,7 +818,7 @@ psa[i][j] = psa[i - 1][j] + psa[i][j - 1] - psa[i - 1][j - 1] + a[i][j];
 
 </details>
 
-## Linked List
+### Linked List
 
 1. Find middle node (Input: head = [1,2,3,4] Output: [3,4])
 
@@ -894,7 +894,7 @@ function reverseLL(head) {
 
 </details>
 
-## Import Problems
+### Import Problems
 
 <details>
 <summary>View contents</summary>
