@@ -349,15 +349,15 @@ def bfs(self, root: Optional[TreeNode]) -> int:
 <details>
 <summary>View contents</summary>
 
-1. Pre-order
+1. Pre-order: `root, left ..., right ...`
 
 ![pre-order](assets/graph/pre-order.png)
 
-2. In-order
+2. In-order: `left ..., root, right ...`
 
 ![pre-order](assets/graph/in-order.png)
 
-3. Post-order
+3. Post-order: `left ..., right ..., root`
 
 ![pre-order](assets/graph/post-order.png)
 
