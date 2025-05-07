@@ -1,3 +1,13 @@
+# O(n * k) time complexity where k is the number of bits (i.e. log₂(max_value))
+# Best for integers, not for negative numbers unless adjusted.
+
+# How it works:
+# Radix sort processes the bits of the number from least significant bit (LSB) to most significant bit (MSB).
+# For each bit position, it partitions the array into two groups:
+# Numbers with that bit = 0
+# Numbers with that bit = 1
+# This is done using bitwise AND: (num >> bit) & 1
+
 def radixSort(nums):
     def get_max_bits(max_num):
         bits = 0
