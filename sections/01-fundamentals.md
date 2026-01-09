@@ -1242,6 +1242,9 @@ def find_max_sum_subarray(arr, k):
 
 ### Section 1.1 Answers
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
 ### Fill in the Gaps
 1. sorting
 2. constant
@@ -1275,7 +1278,12 @@ Space Complexity: O(n)
 - Overall: O(n)
 ```
 
+</details>
+
 ### Section 1.2 Answers
+
+<details>
+<summary><strong>View Answers</strong></summary>
 
 ### Fill in the Gaps
 1. sorted
@@ -1318,6 +1326,8 @@ def find_max_sum_subarray(arr, k):
 # Space: O(1)
 ```
 
+</details>
+
 ---
 
 ## Interview Questions - Fundamentals
@@ -1325,6 +1335,10 @@ def find_max_sum_subarray(arr, k):
 ### Question 1: Explain Big O notation to a non-technical person
 
 **Sample Answer:**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
 "Big O notation is like describing how long a task takes as the work increases. Imagine you're a teacher grading papers:
 
 - **O(1)**: Looking at the top paper - same time whether you have 10 or 1000 papers
@@ -1334,9 +1348,15 @@ def find_max_sum_subarray(arr, k):
 
 We care about Big O because it tells us how well our solution will handle large amounts of data, which is critical in real applications."
 
+</details>
+
 ### Question 2: When would you choose O(n) space to achieve O(n) time vs O(1) space with O(n²) time?
 
 **Sample Answer:**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
 "This is a classic time-space tradeoff. I'd consider:
 
 **Choose O(n) space for O(n) time when:**
@@ -1353,9 +1373,15 @@ We care about Big O because it tells us how well our solution will handle large 
 
 In modern web applications, I typically optimize for time because user experience is paramount and memory is relatively cheap. However, in big data scenarios with billions of records, memory becomes the bottleneck and we need space-efficient solutions."
 
+</details>
+
 ### Question 3: How do you decide between different patterns for a problem?
 
 **Sample Answer:**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
 "I follow a systematic approach:
 
 1. **Identify constraints**: Sorted? Linked list? Size limits?
@@ -1374,9 +1400,15 @@ Example: 'Find two products with prices summing to $500'
 
 I'd choose two pointers if data is already sorted, otherwise hash map for unsorted data, depending on whether the array is large enough that sorting overhead O(n log n) matters."
 
+</details>
+
 ### Question 4: Explain a time when you optimized code complexity
 
 **Sample Answer (Prepare your own):**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
 "At [Company], we had a report generation feature that was timing out for large accounts. The original implementation used nested loops to match transactions with invoices - O(n*m) where n=transactions, m=invoices.
 
 I optimized it by:
@@ -1389,6 +1421,8 @@ For accounts with 10,000 transactions and 5,000 invoices:
 - After: 15,000 operations (~0.1 seconds)
 
 This shows that analyzing complexity isn't just academic - it directly impacts user experience."
+
+</details>
 
 ---
 
