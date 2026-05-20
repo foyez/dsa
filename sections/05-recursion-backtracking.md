@@ -68,7 +68,10 @@ factorial(3) returns 3 * 2 = 6
 
 ### 5.1.2 Basic Recursion Examples
 
-#### Example 1: Factorial
+
+
+<details>
+<summary><strong>View Example 1: Factorial</strong></summary>
 
 ```python
 def factorial(n):
@@ -101,7 +104,10 @@ print(factorial(0))  # 1
 # Returns: 1 → 2*1=2 → 3*2=6
 ```
 
-#### Example 2: Fibonacci Numbers
+</details>
+
+<details>
+<summary><strong>View Example 2: Fibonacci Numbers</strong></summary>
 
 ```python
 def fibonacci(n):
@@ -169,7 +175,10 @@ def fibonacci_memo(n, memo=None):
 print(fibonacci_memo(50))  # Fast! 12586269025
 ```
 
-#### Example 3: Power Function
+</details>
+
+<details>
+<summary><strong>View Example 3: Power Function</strong></summary>
 
 ```python
 def power(base, exp):
@@ -218,11 +227,14 @@ def power_optimized(base, exp):
 print(power_optimized(2, 10))  # 1024
 ```
 
+</details>
+
 ---
 
 ### 5.1.3 Recursive Data Structure Traversal
 
-#### Binary Tree Traversal
+<details>
+<summary><strong>View Binary Tree Traversal</strong></summary>
 
 ```python
 class TreeNode:
@@ -297,7 +309,10 @@ print(preorder_traversal(root))   # [1, 2, 4, 5, 3]
 print(postorder_traversal(root))  # [4, 5, 2, 3, 1]
 ```
 
-#### Tree Height and Depth
+</details>
+
+<details>
+<summary><strong>View Tree Height and Depth</strong></summary>
 
 ```python
 def max_depth(root):
@@ -351,11 +366,14 @@ def is_balanced(root):
 # Space: O(h)
 ```
 
+</details>
+
 ---
 
 ### 5.1.4 Recursion Patterns & Templates
 
-#### Pattern 1: Single Branch Recursion
+<details>
+<summary><strong>View Pattern 1: Single Branch Recursion</strong></summary>
 
 ```python
 def single_branch_template(n):
@@ -399,7 +417,10 @@ def sum_of_digits(n):
 print(sum_of_digits(1234))  # 10
 ```
 
-#### Pattern 2: Multiple Branch Recursion
+</details>
+
+<details>
+<summary><strong>View Pattern 2: Multiple Branch Recursion</strong></summary>
 
 ```python
 def multiple_branch_template(problem):
@@ -458,7 +479,10 @@ def count_paths_memo(m, n, memo=None):
 # Space: O(m × n)
 ```
 
-#### Pattern 3: Divide and Conquer
+</details>
+
+<details>
+<summary><strong>View Pattern 3: Divide and Conquer</strong></summary>
 
 ```python
 def divide_and_conquer_template(arr, left, right):
@@ -528,11 +552,14 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 print(merge_sort(arr))  # [3, 9, 10, 27, 38, 43, 82]
 ```
 
+</details>
+
 ---
 
 ### 5.1.5 Common Recursion Problems
 
-#### Problem: Reverse String
+<details>
+<summary><strong>View Problem: Reverse String</strong></summary>
 
 ```python
 def reverse_string(s):
@@ -572,7 +599,10 @@ def reverse_string_optimized(s, left=0, right=None):
     return ''.join(s)
 ```
 
-#### Problem: Check Palindrome
+</details>
+
+<details>
+<summary><strong>View Problem: Check Palindrome</strong></summary>
 
 ```python
 def is_palindrome_recursive(s, left=0, right=None):
@@ -602,7 +632,10 @@ print(is_palindrome_recursive("racecar"))  # True
 print(is_palindrome_recursive("hello"))    # False
 ```
 
-#### Problem: Generate Parentheses
+</details>
+
+<details>
+<summary><strong>View Problem: Generate Parentheses</strong></summary>
 
 ```python
 def generate_parentheses(n):
@@ -641,6 +674,8 @@ def generate_parentheses(n):
 print(generate_parentheses(3))
 # ['((()))', '(()())', '(())()', '()(())', '()()()']
 ```
+
+</details>
 
 ---
 
@@ -722,7 +757,8 @@ Backtrack to try other paths.
 
 ### 5.2.2 Backtracking Patterns
 
-#### Pattern 1: Subsets (Choose or Not Choose)
+<details>
+<summary><strong>View Pattern 1: Subsets (Choose or Not Choose)</strong></summary>
 
 ```python
 def subsets(nums):
@@ -791,7 +827,10 @@ print(subsets_with_dup([1, 2, 2]))
 # [[], [1], [1,2], [1,2,2], [2], [2,2]]
 ```
 
-#### Pattern 2: Combinations (Choose K Elements)
+</details>
+
+<details>
+<summary><strong>View Pattern 2: Combinations (Choose K Elements)</strong></summary>
 
 ```python
 def combine(n, k):
@@ -867,7 +906,10 @@ print(combination_sum([2, 3, 6, 7], 7))
 # [[2,2,3], [7]]
 ```
 
-#### Pattern 3: Permutations (Arrange Elements)
+</details>
+
+<details>
+<summary><strong>View Pattern 3: Permutations (Arrange Elements)</strong></summary>
 
 ```python
 def permute(nums):
@@ -964,7 +1006,10 @@ print(permute_unique([1, 1, 2]))
 # [[1,1,2], [1,2,1], [2,1,1]]
 ```
 
-#### Pattern 4: Partition Problems
+</details>
+
+<details>
+<summary><strong>View Pattern 4: Partition Problems</strong></summary>
 
 ```python
 def partition(s):
@@ -1005,11 +1050,14 @@ print(partition("aab"))
 # [['a', 'a', 'b'], ['aa', 'b']]
 ```
 
+</details>
+
 ---
 
 ### 5.2.3 Classic Backtracking Problems
 
-#### Problem: N-Queens
+<details>
+<summary><strong>View Problem: N-Queens</strong></summary>
 
 ```python
 def solve_n_queens(n):
@@ -1074,7 +1122,10 @@ for solution in solutions:
 # Outputs two valid 4-queens solutions
 ```
 
-#### Problem: Sudoku Solver
+</details>
+
+<details>
+<summary><strong>View Problem: Sudoku Solver</strong></summary>
 
 ```python
 def solve_sudoku(board):
@@ -1126,7 +1177,10 @@ def solve_sudoku(board):
 # Space: O(1) - modify in place
 ```
 
-#### Problem: Word Search
+</details>
+
+<details>
+<summary><strong>View Problem: Word Search</strong></summary>
 
 ```python
 def exist(board, word):
@@ -1179,6 +1233,8 @@ def exist(board, word):
 # Space: O(L) - recursion depth
 ```
 
+</details>
+
 ---
 
 ## Recursion vs Iteration
@@ -1213,6 +1269,9 @@ def factorial_iterative(n):
 
 ## Practice Questions - Section 5.1 (Recursion)
 
+<details>
+<summary><strong>View Questions</strong></summary>
+
 ### Fill in the Gaps
 
 1. The two essential components of recursion are the ________ case and the recursive case.
@@ -1221,6 +1280,17 @@ def factorial_iterative(n):
 4. Memoization improves Fibonacci to ________ time complexity.
 5. The space complexity of recursion is determined by the maximum ________ depth.
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **base**
+2. **base** (or terminating condition)
+3. **O(2^n)** (exponential)
+4. **O(n)**
+5. **recursion** (or call stack)
+
+</details>
+
 ### True or False
 
 1. Every recursive function can be converted to an iterative one. **[T/F]**
@@ -1228,6 +1298,17 @@ def factorial_iterative(n):
 3. The base case prevents infinite recursion. **[T/F]**
 4. Fast exponentiation reduces time complexity to O(log n). **[T/F]**
 5. Inorder traversal of a BST produces sorted order. **[T/F]**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **True** - Any recursion can be simulated with a stack
+2. **False** - Tail recursion can be optimized to O(1) space
+3. **True** - Essential for termination
+4. **True** - Reduces from O(n) to O(log n)
+5. **True** - Left → Root → Right gives sorted order
+
+</details>
 
 ### Multiple Choice
 
@@ -1249,6 +1330,15 @@ def factorial_iterative(n):
    - C) Bubble sort
    - D) Sequential processing
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **C** - O(n) recursion depth for n calls
+2. **B** - Preorder: Root → Left → Right
+3. **B** - Merge sort uses divide and conquer
+
+</details>
+
 ### Code Challenge
 
 ```python
@@ -1268,97 +1358,8 @@ def climb_stairs(n):
     pass
 ```
 
----
-
-## Practice Questions - Section 5.2 (Backtracking)
-
-### Fill in the Gaps
-
-1. Backtracking systematically explores all ________ solutions.
-2. The three steps in backtracking are: make choice, ________, and backtrack.
-3. Generating all subsets of n elements takes ________ time.
-4. The N-Queens problem uses backtracking to place queens without ________.
-5. In backtracking, we ________ a choice if it violates constraints.
-
-### True or False
-
-1. Backtracking is more efficient than brute force. **[T/F]**
-2. All backtracking problems have exponential time complexity. **[T/F]**
-3. Permutations of n elements generate n! results. **[T/F]**
-4. Backtracking can solve any constraint satisfaction problem. **[T/F]**
-5. Pruning in backtracking reduces the search space. **[T/F]**
-
-### Multiple Choice
-
-1. How many subsets exist for an array of n elements?
-   - A) n
-   - B) n²
-   - C) 2^n
-   - D) n!
-
-2. Which pattern is used for "Combination Sum"?
-   - A) Subsets
-   - B) Permutations
-   - C) Combinations with reuse
-   - D) Partitioning
-
-3. The N-Queens problem for n=8 is:
-   - A) Polynomial time
-   - B) Linear time
-   - C) NP-complete
-   - D) Unsolvable
-
-### Code Challenge
-
-```python
-def letter_combinations(digits):
-    """
-    LeetCode 17: Letter Combinations of Phone Number
-    
-    Given digit string, return all possible letter combinations.
-    
-    Mapping: 2→abc, 3→def, 4→ghi, 5→jkl, 
-             6→mno, 7→pqrs, 8→tuv, 9→wxyz
-    
-    Example: digits = "23"
-    Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-    
-    Implement using backtracking.
-    """
-    # Your code here
-    pass
-```
-
----
-
-## Answers - Section 5.1 (Recursion)
-
 <details>
 <summary><strong>View Answers</strong></summary>
-
-### Fill in the Gaps
-
-1. **base**
-2. **base** (or terminating condition)
-3. **O(2^n)** (exponential)
-4. **O(n)**
-5. **recursion** (or call stack)
-
-### True or False
-
-1. **True** - Any recursion can be simulated with a stack
-2. **False** - Tail recursion can be optimized to O(1) space
-3. **True** - Essential for termination
-4. **True** - Reduces from O(n) to O(log n)
-5. **True** - Left → Root → Right gives sorted order
-
-### Multiple Choice
-
-1. **C** - O(n) recursion depth for n calls
-2. **B** - Preorder: Root → Left → Right
-3. **B** - Merge sort uses divide and conquer
-
-### Code Challenge Answer
 
 ```python
 def climb_stairs(n, memo=None):
@@ -1390,14 +1391,25 @@ print(climb_stairs(5))  # 8
 
 </details>
 
+</details>
+
 ---
 
-## Answers - Section 5.2 (Backtracking)
+## Practice Questions - Section 5.2 (Backtracking)
+
+<details>
+<summary><strong>View Questions</strong></summary>
+
+### Fill in the Gaps
+
+1. Backtracking systematically explores all ________ solutions.
+2. The three steps in backtracking are: make choice, ________, and backtrack.
+3. Generating all subsets of n elements takes ________ time.
+4. The N-Queens problem uses backtracking to place queens without ________.
+5. In backtracking, we ________ a choice if it violates constraints.
 
 <details>
 <summary><strong>View Answers</strong></summary>
-
-### Fill in the Gaps
 
 1. **possible** (or candidate)
 2. **recurse** (or explore)
@@ -1405,7 +1417,18 @@ print(climb_stairs(5))  # 8
 4. **attacks** (or conflicts)
 5. **prune** (or skip/abandon)
 
+</details>
+
 ### True or False
+
+1. Backtracking is more efficient than brute force. **[T/F]**
+2. All backtracking problems have exponential time complexity. **[T/F]**
+3. Permutations of n elements generate n! results. **[T/F]**
+4. Backtracking can solve any constraint satisfaction problem. **[T/F]**
+5. Pruning in backtracking reduces the search space. **[T/F]**
+
+<details>
+<summary><strong>View Answers</strong></summary>
 
 1. **True** - Prunes invalid paths early
 2. **False** - Some have polynomial solutions with pruning
@@ -1413,13 +1436,60 @@ print(climb_stairs(5))  # 8
 4. **True** - Though may be very slow
 5. **True** - Eliminates impossible branches
 
+</details>
+
 ### Multiple Choice
+
+1. How many subsets exist for an array of n elements?
+   - A) n
+   - B) n²
+   - C) 2^n
+   - D) n!
+
+2. Which pattern is used for "Combination Sum"?
+   - A) Subsets
+   - B) Permutations
+   - C) Combinations with reuse
+   - D) Partitioning
+
+3. The N-Queens problem for n=8 is:
+   - A) Polynomial time
+   - B) Linear time
+   - C) NP-complete
+   - D) Unsolvable
+
+<details>
+<summary><strong>View Answers</strong></summary>
 
 1. **C** - Each element: include or exclude = 2^n
 2. **C** - Combinations where elements can be reused
 3. **C** - Classic NP-complete problem
 
-### Code Challenge Answer
+</details>
+
+### Code Challenge
+
+```python
+def letter_combinations(digits):
+    """
+    LeetCode 17: Letter Combinations of Phone Number
+    
+    Given digit string, return all possible letter combinations.
+    
+    Mapping: 2→abc, 3→def, 4→ghi, 5→jkl, 
+             6→mno, 7→pqrs, 8→tuv, 9→wxyz
+    
+    Example: digits = "23"
+    Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+    
+    Implement using backtracking.
+    """
+    # Your code here
+    pass
+```
+
+<details>
+<summary><strong>View Answers</strong></summary>
 
 ```python
 def letter_combinations(digits):
@@ -1458,40 +1528,42 @@ print(letter_combinations("23"))
 
 </details>
 
+</details>
+
 ---
 
 ## LeetCode Problems - Recursion & Backtracking (NeetCode.io)
 
 ### Recursion - Easy ✅
-- 206. Reverse Linked List
-- 231. Power of Two
-- 326. Power of Three
-- 509. Fibonacci Number
+206. Reverse Linked List
+231. Power of Two
+326. Power of Three
+509. Fibonacci Number
 
 ### Recursion - Medium 🟨
-- 50. Pow(x, n) - Fast exponentiation
-- 70. Climbing Stairs - Fibonacci variant
-- 894. All Possible Full Binary Trees
+50. Pow(x, n) - Fast exponentiation
+70. Climbing Stairs - Fibonacci variant
+894. All Possible Full Binary Trees
 
 ### Backtracking - Medium 🟨
-- 17. Letter Combinations of a Phone Number (IMPORTANT)
-- 22. Generate Parentheses (IMPORTANT)
-- 39. Combination Sum (IMPORTANT)
-- 40. Combination Sum II
-- 46. Permutations (IMPORTANT)
-- 47. Permutations II
-- 77. Combinations
-- 78. Subsets (IMPORTANT)
-- 90. Subsets II
-- 131. Palindrome Partitioning
-- 216. Combination Sum III
+17. Letter Combinations of a Phone Number (IMPORTANT)
+22. Generate Parentheses (IMPORTANT)
+39. Combination Sum (IMPORTANT)
+40. Combination Sum II
+46. Permutations (IMPORTANT)
+47. Permutations II
+77. Combinations
+78. Subsets (IMPORTANT)
+90. Subsets II
+131. Palindrome Partitioning
+216. Combination Sum III
 
 ### Backtracking - Hard 🔴
-- 37. Sudoku Solver
-- 51. N-Queens (VERY IMPORTANT)
-- 52. N-Queens II
-- 79. Word Search (IMPORTANT)
-- 212. Word Search II
+37. Sudoku Solver
+51. N-Queens (VERY IMPORTANT)
+52. N-Queens II
+79. Word Search (IMPORTANT)
+212. Word Search II
 
 ---
 
