@@ -58,7 +58,9 @@ O(2ⁿ)      : ████████████████... (1.26 × 10³
 
 ### Real-World Examples
 
-#### O(1) - Constant Time
+<details>
+<summary><strong>View O(1) - Constant Time</strong></summary>
+
 ```python
 # E-commerce: Get product price by ID
 def get_product_price(product_catalog, product_id):
@@ -107,7 +109,11 @@ def find_product_in_price_range(sorted_products, target_price):
 # Example: Finding $999 phone in 1000 products takes ~10 comparisons
 ```
 
-#### O(n) - Linear Time
+</details>
+
+<details>
+<summary><strong>View O(n) - Linear Time</strong></summary>
+
 ```python
 # E-commerce: Calculate total cart value
 def calculate_cart_total(shopping_cart):
@@ -156,7 +162,11 @@ sorted_products = sort_products_by_rating_price(products)
 # Result: Laptop C (4.8), Laptop B (4.5, cheaper), Laptop A (4.5)
 ```
 
-#### O(n²) - Quadratic Time
+</details>
+
+<details>
+<summary><strong>View O(n²) - Quadratic Time</strong></summary>
+
 ```python
 # E-commerce: Find duplicate reviews (naive approach)
 def find_duplicate_reviews_naive(reviews):
@@ -195,7 +205,11 @@ def find_duplicate_reviews_optimized(reviews):
 # Space: O(n) - Store all unique review texts
 ```
 
-#### O(2ⁿ) - Exponential Time
+</details>
+
+<details>
+<summary><strong>View O(2ⁿ) - Exponential Time</strong></summary>
+
 ```python
 # E-commerce: Generate all possible product bundles (naive)
 def generate_all_bundles(products):
@@ -225,6 +239,8 @@ def generate_all_bundles(products):
 # For 20 products: 1,048,576 combinations!
 # For 30 products: 1,073,741,824 combinations - impractical!
 ```
+
+</details>
 
 ### 1.1.2 Space Complexity
 
@@ -304,6 +320,9 @@ def build_friend_matrix(users, friendships):
 
 **Amortized analysis** considers average cost over a sequence of operations.
 
+<details>
+<summary><strong>View Amortized analysis Example</strong></summary>
+
 ```python
 # E-commerce: Dynamic array for shopping cart
 class ShoppingCart:
@@ -355,9 +374,13 @@ for i in range(100):
     cart.add_item(f"Product {i}")  # Each add is O(1) amortized
 ```
 
+</details>
+
 ### Key Rules for Analyzing Complexity
 
-**Rule 1: Drop Constants**
+<details>
+<summary><strong>Rule 1: Drop Constants</strong></summary>
+
 ```python
 # Both are O(n), not O(2n) or O(n + 10)
 def process_orders_v1(orders):
@@ -374,7 +397,11 @@ def process_orders_v2(orders):
     # Total: O(n)
 ```
 
-**Rule 2: Drop Non-Dominant Terms**
+</details>
+
+<details>
+<summary><strong>Rule 2: Drop Non-Dominant Terms</strong></summary>
+
 ```python
 # O(n² + n) → O(n²)
 # O(n² + log n) → O(n²)
@@ -395,7 +422,11 @@ def find_similar_products(products, reviews):
     # If m and n independent, keep both
 ```
 
-**Rule 3: Different Variables for Different Inputs**
+</details>
+
+<details>
+<summary><strong>Rule 3: Different Variables for Different Inputs</strong></summary>
+
 ```python
 # Wrong: O(n)
 # Correct: O(n + m) where n = products, m = reviews
@@ -412,6 +443,8 @@ def cross_reference_products_reviews(products, reviews):
     
     # Time: O(n + m) - NOT O(n)!
 ```
+
+</details>
 
 ---
 
@@ -438,7 +471,8 @@ def cross_reference_products_reviews(products, reviews):
 
 ---
 
-#### Pattern 1: Opposite Direction (Converging Pointers)
+<details>
+<summary><strong>View Pattern 1: Opposite Direction (Converging Pointers)</strong></summary>
 
 **Template:**
 ```python
@@ -609,9 +643,12 @@ heights = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 print(max_area(heights))  # 49 (indices 1 and 8: 8 * min(8,7) = 49)
 ```
 
+</details>
+
 ---
 
-#### Pattern 2: Same Direction (Fast & Slow Pointers)
+<details>
+<summary><strong>View Pattern 2: Same Direction (Fast & Slow Pointers)</strong></summary>
 
 **Template:**
 ```python
@@ -713,9 +750,12 @@ move_zeroes(nums)
 print(nums)  # [1, 3, 12, 0, 0]
 ```
 
+</details>
+
 ---
 
-#### Pattern 3: Different Speeds (Cycle Detection)
+<details>
+<summary><strong>View Pattern 3: Different Speeds (Cycle Detection)</strong></summary>
 
 **Template:**
 ```python
@@ -778,6 +818,8 @@ def has_cycle(head):
 # Time: O(n)
 # Space: O(1)
 ```
+
+</details>
 
 ---
 
@@ -851,6 +893,9 @@ Is array/list sorted?
 
 **Real-World Analogy**: Like two workers on an assembly line - one starts from each end, meeting in the middle; or one slow worker doing quality checks while a fast worker scans ahead.
 
+<details>
+<summary><strong>View Example</strong></summary>
+
 ```python
 def find_products_for_budget(sorted_prices, budget):
     """
@@ -887,11 +932,16 @@ products = [
 result = find_products_for_budget(products, 275)  # Mouse + Monitor
 ```
 
+</details>
+
 **Common Two Pointer Patterns:**
 
 1. **Opposite Direction** (above example)
 2. **Same Direction** (fast & slow)
 3. **Sliding Window** (next section)
+
+<details>
+<summary><strong>View Example</strong></summary>
 
 ```python
 # Same direction: Remove duplicates from customer order
@@ -923,11 +973,16 @@ unique_len = remove_duplicate_items(order)
 print(order[:unique_len])  # ['Laptop', 'Mouse', 'Keyboard']
 ```
 
+</details>
+
 ### 1.2.2 Sliding Window Pattern
 
 🎯 **Use When**: Finding subarrays/substrings with specific properties
 
 **Real-World**: Like viewing products through a shop window - slide to see different sets.
+
+<details>
+<summary><strong>View Example</strong></summary>
 
 ```python
 # E-commerce: Maximum revenue in any k-day period
@@ -959,7 +1014,12 @@ revenue = [2000, 3000, 1000, 4000, 5000, 2000, 3000]
 best = max_revenue_k_days(revenue, 3)  # 11000 (days 4-6: 4000+5000+2000)
 ```
 
+</details>
+
 **Variable Window Size:**
+
+<details>
+<summary><strong>View Example</strong></summary>
 
 ```python
 # E-commerce: Smallest order size with minimum total value
@@ -995,11 +1055,16 @@ values = [10, 20, 30, 15, 25, 40, 35]
 result = smallest_order_with_min_value(values, 80)  # 2 items (40+35=75 not enough, 25+40=65, 15+25+40=80)
 ```
 
+</details>
+
 ### 1.2.3 Fast & Slow Pointers
 
 🎯 **Use When**: Detecting cycles, finding middle element, or linked list problems
 
 **Real-World**: Like two runners on a track - one runs twice as fast.
+
+<details>
+<summary><strong>View Example</strong></summary>
 
 ```python
 # Social Network: Detect circular reference in user recommendations
@@ -1047,7 +1112,12 @@ charlie.recommended_by = alice  # Creates cycle!
 print(has_circular_recommendations(alice))  # True
 ```
 
+</details>
+
 **Finding Middle Element:**
+
+<details>
+<summary><strong>View Example</strong></summary>
 
 ```python
 # E-commerce: Find median review score efficiently
@@ -1092,6 +1162,8 @@ review4.next = review5
 median = find_median_review(review1)  # 3
 ```
 
+</details>
+
 ### 1.2.4 Pattern Recognition Guide
 
 | Pattern | When to Use | Time | Space | Key Indicators |
@@ -1111,6 +1183,9 @@ median = find_median_review(review1)  # 3
 
 ## Practice Questions - Section 1.1
 
+<details>
+<summary><strong>View Questions</strong></summary>
+
 ### Fill in the Gaps
 
 1. The time complexity O(n log n) is typically associated with efficient ________ algorithms like merge sort.
@@ -1119,6 +1194,17 @@ median = find_median_review(review1)  # 3
 4. Dropping constants means O(2n + 5) simplifies to ________.
 5. Amortized analysis considers the ________ cost of operations over a sequence.
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. sorting
+2. constant
+3. recursion (or call stack)
+4. O(n)
+5. average
+
+</details>
+
 ### True or False
 
 1. O(n²) is always slower than O(n log n) for all values of n. **[T/F]**
@@ -1126,6 +1212,17 @@ median = find_median_review(review1)  # 3
 3. Binary search has O(log n) time complexity because it halves the search space each iteration. **[T/F]**
 4. O(n + m) and O(n) are equivalent when n and m represent different inputs. **[T/F]**
 5. Recursive functions always have at least O(n) space complexity. **[T/F]**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **False** - For very small n (like n=1), they're equal. We mean for large n.
+2. **False** - O(1) means constant space, not zero space (still uses variables).
+3. **True** - Binary search eliminates half the elements each step.
+4. **False** - They are different; we must keep both variables.
+5. **False** - Iterative recursion or tail recursion can be O(1) space.
+
+</details>
 
 ### Multiple Choice
 
@@ -1153,6 +1250,16 @@ median = find_median_review(review1)  # 3
    - C) O(n²)
    - D) O(3n² + 2n)
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **C** - Hash map lookup is O(1) average case
+2. **B** - Array index access is always O(1)
+3. **A** - O(log n) grows slowest
+4. **C** - Drop constants and lower terms = O(n²)
+
+</details>
+
 ### Code Challenge
 
 ```python
@@ -1179,9 +1286,31 @@ def mystery_function(products, target_category):
 **Question**: What are the time and space complexities?
 - Assume n = total products, k = products in target category
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+```
+Time Complexity: O(n + k log k)
+- Step 1 (grouping): O(n) - iterate all products
+- Step 2 (sorting): O(k log k) - sort k products in target category
+- Overall: O(n + k log k)
+
+Space Complexity: O(n)
+- categories dictionary: O(n) - stores all products
+- result list: O(k) - at most 10 products
+- Overall: O(n)
+```
+
+</details>
+
+</details>
+
 ---
 
 ## Practice Questions - Section 1.2
+
+<details>
+<summary><strong>View Questions</strong></summary>
 
 ### Fill in the Gaps
 
@@ -1191,6 +1320,17 @@ def mystery_function(products, target_category):
 4. The sliding window technique avoids recalculating by ________ one element and adding another.
 5. Two pointers running in opposite directions typically achieve ________ time complexity.
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. sorted
+2. consecutive (or any k)
+3. cycle
+4. removing (or subtracting)
+5. O(n) or linear
+
+</details>
+
 ### True or False
 
 1. Sliding window can only be used with fixed-size windows. **[T/F]**
@@ -1198,6 +1338,17 @@ def mystery_function(products, target_category):
 3. Two pointers pattern always requires the array to be sorted first. **[T/F]**
 4. Variable-size sliding window can solve problems in better than O(n²) time. **[T/F]**
 5. The fast pointer in cycle detection always moves exactly twice as fast as the slow pointer. **[T/F]**
+
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **False** - Variable-size windows are common (e.g., smallest subarray with sum ≥ k)
+2. **False** - Only requires O(1) space (two pointers)
+3. **False** - Can be used on unsorted arrays (e.g., remove duplicates in-place)
+4. **True** - Reduces nested loop O(n²) to single pass O(n)
+5. **True** - Typically fast moves 2 steps, slow moves 1 step
+
+</details>
 
 ### Multiple Choice
 
@@ -1219,6 +1370,15 @@ def mystery_function(products, target_category):
    - C) The list length is even
    - D) The middle element is found
 
+<details>
+<summary><strong>View Answers</strong></summary>
+
+1. **B** - Variable sliding window expands/contracts to find longest valid substring
+2. **D** - Both are O(n) and optimal; two pointers uses O(1) space, hash map uses O(n) space
+3. **B** - Meeting point indicates cycle exists (Floyd's algorithm)
+
+</details>
+
 ### Code Challenge
 
 ```python
@@ -1236,75 +1396,9 @@ def find_max_sum_subarray(arr, k):
 
 **Question**: This implementation is O(n*k). Rewrite using sliding window to achieve O(n).
 
----
-
-## Answers
-
-### Section 1.1 Answers
-
 <details>
 <summary><strong>View Answers</strong></summary>
 
-### Fill in the Gaps
-1. sorting
-2. constant
-3. recursion (or call stack)
-4. O(n)
-5. average
-
-### True or False
-1. **False** - For very small n (like n=1), they're equal. We mean for large n.
-2. **False** - O(1) means constant space, not zero space (still uses variables).
-3. **True** - Binary search eliminates half the elements each step.
-4. **False** - They are different; we must keep both variables.
-5. **False** - Iterative recursion or tail recursion can be O(1) space.
-
-### Multiple Choice
-1. **C** - Hash map lookup is O(1) average case
-2. **B** - Array index access is always O(1)
-3. **A** - O(log n) grows slowest
-4. **C** - Drop constants and lower terms = O(n²)
-
-### Code Challenge Answer
-```
-Time Complexity: O(n + k log k)
-- Step 1 (grouping): O(n) - iterate all products
-- Step 2 (sorting): O(k log k) - sort k products in target category
-- Overall: O(n + k log k)
-
-Space Complexity: O(n)
-- categories dictionary: O(n) - stores all products
-- result list: O(k) - at most 10 products
-- Overall: O(n)
-```
-
-</details>
-
-### Section 1.2 Answers
-
-<details>
-<summary><strong>View Answers</strong></summary>
-
-### Fill in the Gaps
-1. sorted
-2. consecutive (or any k)
-3. cycle
-4. removing (or subtracting)
-5. O(n) or linear
-
-### True or False
-1. **False** - Variable-size windows are common (e.g., smallest subarray with sum ≥ k)
-2. **False** - Only requires O(1) space (two pointers)
-3. **False** - Can be used on unsorted arrays (e.g., remove duplicates in-place)
-4. **True** - Reduces nested loop O(n²) to single pass O(n)
-5. **True** - Typically fast moves 2 steps, slow moves 1 step
-
-### Multiple Choice
-1. **B** - Variable sliding window expands/contracts to find longest valid substring
-2. **D** - Both are O(n) and optimal; two pointers uses O(1) space, hash map uses O(n) space
-3. **B** - Meeting point indicates cycle exists (Floyd's algorithm)
-
-**Code Challenge - Optimized Solution:**
 ```python
 def find_max_sum_subarray(arr, k):
     """Sliding window approach - O(n)"""
@@ -1325,6 +1419,8 @@ def find_max_sum_subarray(arr, k):
 # Time: O(n) - single pass after initial window
 # Space: O(1)
 ```
+
+</details>
 
 </details>
 
